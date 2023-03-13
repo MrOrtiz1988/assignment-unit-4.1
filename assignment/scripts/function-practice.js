@@ -15,21 +15,30 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  return 'Hello, ' + name + '!';
 }
 // Remember to call the function to test
+console.log('Calling helloName should say Hello, Luis!:', helloName('Luis'));
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
+  return firstNumber + secondNumber;
 }
+console.log('Calling addNumbers with 1 and 2:', addNumbers(1, 2));
+console.log('Calling addNumbers with 5 and 5:', addNumbers(5, 5));
+console.log('Calling addNumbers with 20 and 7:', addNumbers(20, 7));
+
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree(num1, num2, num3 ){
+  return num1 * num2 * num3;
 }
+console.log('Multiplying 3 numbers: 1 2 3:', multiplyThree(1, 2, 3));
+console.log('Multiplying 3 numbers: 10 10 10:', multiplyThree(10, 10, 10));
+console.log('Multiplying 3 numbers: 6 10 43:', multiplyThree(6, 10, 43));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -49,6 +58,8 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let emptyArray = [];
+let officeSupplies = ['Pencil', 'Notebook', 'Ball Pen', 'Graph Paper', 'Paper Clips'];
 function getLast( array ) {
 
 }
