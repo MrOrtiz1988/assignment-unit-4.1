@@ -14,6 +14,7 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
+
 function helloName( name ) {
   return 'Hello, ' + name + '!';
 }
@@ -22,6 +23,7 @@ console.log('Calling helloName should say Hello, Luis!:', helloName('Luis'));
 
 
 // 3. Function to add two numbers together & return the result
+
 function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
   return firstNumber + secondNumber;
@@ -85,7 +87,7 @@ function find(value, array){
 }
 
 console.log('is Notebook in the array? should say true', find('Notebook', officeSupplies));
-console.log('is Paper Clis in the array? should say true', find('Paper Clips', officeSupplies));
+console.log('is Paper Clips in the array? should say true', find('Paper Clips', officeSupplies));
 console.log('is ink in the array? should say false', find('ink', officeSupplies));
 
 
@@ -95,6 +97,7 @@ console.log('is ink in the array? should say false', find('ink', officeSupplies)
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+
 function isFirstLetter(letter, string) {
   if(letter === string.charAt(0)){
     return true;
@@ -107,10 +110,20 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
-  let sum = 0
+  let nums = [];
+  
   // TODO: loop to add items
+  let i = 0;
+  while(i <= 10){
+    nums.push(i);
+    i++;
+  }
+  let sum = nums.reduce((partialSum, a) => partialSum + a, 0);
   return sum;
 }
+
+console.log('Pushed an array from 0 to 10, all added together should equal 55', sumAll());
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
