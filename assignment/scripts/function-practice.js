@@ -74,18 +74,19 @@ console.log('Caling getLast for empty array, should return undefined', getLast(e
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find(value, array){
-  for(i = 0; i < array.length; i++){
-    if(array[i] === value){
-      return true; 
-    }else{
-      return false;
-    }
+  for(i of array){
+    if(i === value){
+      return true;
+    } 
   }
+  return false;
 }
-console.log('is Notebook in the array?;', find('Notebook', officeSupplies));
-console.log('is Paper Clip in the array?;', find('Paper Clips', officeSupplies));
-console.log('is ink in the array?;', find('ink', officeSupplies));
+
+console.log('is Notebook in the array? should say true', find('Notebook', officeSupplies));
+console.log('is Paper Clis in the array? should say true', find('Paper Clips', officeSupplies));
+console.log('is ink in the array? should say false', find('ink', officeSupplies));
 
 
 
@@ -95,7 +96,11 @@ console.log('is ink in the array?;', find('ink', officeSupplies));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if(letter === string.charAt(0)){
+    return true;
+  }else{
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
