@@ -45,31 +45,49 @@ console.log('Multiplying 3 numbers: 6 10 43:', multiplyThree(6, 10, 43));
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
-  }
-    return;
+    return true;
+  } else {
+    return false;
+  } 
 }
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
+
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 let emptyArray = [];
 let officeSupplies = ['Pencil', 'Notebook', 'Ball Pen', 'Graph Paper', 'Paper Clips'];
 function getLast( array ) {
-
+  let index = array.length - 1;
+  return array[index];
 }
+console.log('officeSupplies array contains:', officeSupplies);
+console.log('Last item of officeSupplies is', getLast(officeSupplies));
+console.log('This is an empty array called emptyArray', emptyArray);
+console.log('Caling getLast for empty array, should return undefined', getLast(emptyArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+function find(value, array){
+  for(i = 0; i < array.length; i++){
+    if(array[i] === value){
+      return true; 
+    }else{
+      return false;
+    }
+  }
 }
+console.log('is Notebook in the array?;', find('Notebook', officeSupplies));
+console.log('is Paper Clip in the array?;', find('Paper Clips', officeSupplies));
+console.log('is ink in the array?;', find('ink', officeSupplies));
+
+
 
 // ----------------------
 // Stretch Goals
