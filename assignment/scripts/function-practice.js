@@ -146,3 +146,13 @@ console.log('Running getPositive function, should show 6 3 4 7', getPositive(-1,
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+//I will be writing a function from edabit that takes an integer minutes and converts it to seconds.
+
+function convert(mins){
+let secs = mins * 60;
+return secs;
+}
+
+console.log('Should convert 5 mins to 300 secs', convert(5));
+console.log('Should convert 3 mins to 180 secs', convert(3));
+console.log('Should convert 2 mins to 120 secs', convert(2));
