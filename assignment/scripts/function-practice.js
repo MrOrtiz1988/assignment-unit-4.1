@@ -129,7 +129,19 @@ console.log('Pushed an array from 0 to 10, all added together should equal 55', 
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function getPositive(a, b, c, d, e, f){
+  let input = [a, b, c, d, e, f];
+  let onlyPositive = [];
+  for(num of input){
+    if(num > 0){
+      onlyPositive.push(num);
+    }
+  }
+  return onlyPositive;
+}
 
+console.log('Running getPositive function, should show 1 4 7 8', getPositive(1, -6, -3, 4, 7, 8));
+console.log('Running getPositive function, should show 6 3 4 7', getPositive(-1, 6, 3, 4, 7, -8));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
